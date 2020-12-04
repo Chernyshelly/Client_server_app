@@ -11,6 +11,14 @@ namespace WebAAA.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationContext db;
+        public HomeController(ApplicationContext context)
+        {
+            db = context;
+        }
+    }
+    /*public class HomeController : Controller
+    {
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -33,5 +41,5 @@ namespace WebAAA.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    }
+    }*/
 }
